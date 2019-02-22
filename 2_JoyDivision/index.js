@@ -27,13 +27,15 @@ for(var i=step; i<=size - step; i+=step){
   lines.push(line);
 }
 
-for(var i = 0; i < lines.length; i++) {
+for(var i = 4; i < lines.length; i++) {
 
   context.beginPath();
   context.moveTo(lines[i][0].x, lines[i][0].y);
   
-  for(var j = 0; j < lines[i].length; j++) {
-    context.lineTo(lines[i][j].x, lines[i][j].y);
+  for(var j = 0; j < lines[i].length - 1; j++) {
+    var xc = (lines[i][j].x +lines[i][j + 1].x) / 2;
+    var yc = (lines[i][j].y +lines[i][j + 1].y) / 2;
+    context.quadraticCurveTo(lines[i][j].x, lines[i][j].y, xc, yc);
   }
   context.save();
   context.globalCompositeOperation = 'destination-out';

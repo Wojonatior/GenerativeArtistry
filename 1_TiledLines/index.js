@@ -3,7 +3,7 @@ var context = canvas.getContext('2d');
 
 const size = window.innerWidth;
 const dpr = window.devicePixelRatio;
-const step = 80;
+const step = 40;
 
 canvas.width = size * dpr;
 canvas.height = size * dpr;

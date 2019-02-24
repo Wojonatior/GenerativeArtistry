@@ -1,7 +1,7 @@
 var canvas = document.querySelector('canvas');
 var context = canvas.getContext('2d');
 
-const size = window.innerWidth;
+const size = window.innerWidth / 2;
 const dpr = window.devicePixelRatio;
 const step = 40;
 

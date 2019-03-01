@@ -42,7 +42,7 @@ const drawTriangle = (A, B, C) => {
   context.closePath();
   context.stroke();
   const gray = Math.floor(Math.random()*16).toString(16);
-  context.fillStyle = '#' + gray + gray + gray
+  context.fillStyle = '#' + gray + gray + gray;
   context.fill();
 }
 
